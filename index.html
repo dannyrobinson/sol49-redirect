@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sol49 → First Point Energy Supply</title>
+  <meta http-equiv="refresh" content="5;url=https://firstpoint.energy">
+  <style>
+    html,body{height:100%;margin:0}
+    body{display:flex;align-items:center;justify-content:center;font-family:system-ui,Arial,sans-serif;background:#fff;color:#111}
+    .container{text-align:center;padding:20px}
+    img#logo{max-width:320px;width:40vmin;height:auto;display:block;margin:0 auto}
+    h1{font-size:1.1rem;margin:18px 0 8px}
+    p{margin:0;color:#555}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="logo" src="logo.png" alt="Sol49 logo">
+    <h1>Sol49 is now First Point Energy Supply.</h1>
+    <p>Redirecting in <span id="count">5</span> seconds</p>
+  </div>
+
+  <script>
+    (function(){
+      const TARGET_URL = 'https://firstpoine.energy';
+      let count = 5;
+      const el = document.getElementById('count');
+      const iv = setInterval(() => {
+        count--;
+        if (count <= 0) { clearInterval(iv); window.location.href = TARGET_URL; return; }
+        el.textContent = count;
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
